@@ -1,6 +1,6 @@
 # Daily Push Github
 
-This python script automatically increments a number in a text file commits and push the changes to github automatically daily, using Task Scheduler from Windows.
+This python script increments a number in a text file commits and push the changes to github automatically daily, using Task Scheduler from Windows.
 
 1. Clone repository:
    
