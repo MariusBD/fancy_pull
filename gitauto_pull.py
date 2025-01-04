@@ -22,6 +22,7 @@ def git_commit():
     message = f'Contribution day: {date}'
     subprocess.run(['git','commit','-m',message])
     print(message)
+    subprocess.run(['git','push'])
     
 
 git_commit()
