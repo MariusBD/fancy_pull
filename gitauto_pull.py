@@ -1,4 +1,6 @@
 import os
+import subprocess
+import datetime
 
 def read_number():
     with open("text.txt","r") as file:
@@ -15,7 +17,14 @@ add_number = write_number(number_to_change) # --> añade el numero del tipo int,
 # TODO : ACTUALIZAR LOS CAMBIOS DE LA CARPETA, GIT ADD, GIT COMMIT -M "NAME", GIT PUSH  TO REPOSITORY
 
 def git_commit():
+    obj = subprocess.run(['git','add','.'])
+    date = datetime.datetime.now().strftime('%d/%m/%Y')
+    message = f'Contribution day: {date}'
+    subprocess.run(['git','commit','-m',message])
+    print(message)
+    
 
+git_commit()
 
 # for i in range(5):
 #     current_number = read_number()
