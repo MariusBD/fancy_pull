@@ -1,13 +1,19 @@
-import os
 import subprocess
 import datetime
+import os
+
+# extract script dir
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# join dir + file
+file_path = os.path.join(script_dir,"text.txt")
+print(os.chdir(script_dir))
 
 def read_number():
-    with open("text.txt","r") as file:
+    with open(file_path,"r") as file:
         return int(file.read()) 
 
 def write_number(number): 
-    with open("text.txt","w") as file:
+    with open(file_path,"w") as file:
         file.write(str(number)) 
 
 
