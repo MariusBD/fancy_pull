@@ -9,11 +9,11 @@ file_path = os.path.join(script_dir,"text.txt")
 os.chdir(script_dir)
 
 def read_number():
-    with open(file_path,"r") as file:
+    with open("text.txt","r") as file:
         return int(file.read()) 
 
 def write_number(number): 
-    with open(file_path,"w") as file:
+    with open("text.txt","w") as file:
         file.write(str(number)) 
 
 
