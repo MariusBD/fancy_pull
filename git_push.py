@@ -29,6 +29,8 @@ def git_push_changes():
         print(f"Error {str(e)}")
     
 
+
+
 def main():
     try:
         current_number = read_number() 
