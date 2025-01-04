@@ -2,9 +2,8 @@ import subprocess
 import datetime
 import os
 
-# extract script dir
-script_dir = os.path.dirname(os.path.abspath(__file__))
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 
 def read_number():
@@ -18,15 +17,13 @@ def write_number(number):
 
 def git_push_changes():
     try:
-
         # Run git add . in "CLI"
         obj = subprocess.run(['git','add','.'])
-        # current date
         date = datetime.datetime.now().strftime('%d/%m/%Y')
         message = f'Contribution day: {date}'
-        # Commit the changes
+        # Commit
         subprocess.run(['git','commit','-m',message])
-        # Push changes to repository
+        # Push to repository
         subprocess.run(['git','push'])
     except subprocess.CalledProcessError as e:
         print(f"Error {str(e)}")
