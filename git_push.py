@@ -6,7 +6,7 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 # join dir + file
 file_path = os.path.join(script_dir,"text.txt")
-print(os.chdir(script_dir))
+os.chdir(script_dir)
 
 def read_number():
     with open(file_path,"r") as file:
